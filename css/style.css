@@ -1,0 +1,202 @@
+/*hidden Login input word */
+.hidden {
+    display: none;
+  }
+  
+  /*background에 설정한 사진들. 즉 img폴더 있는 사진들을 백그라운드로 만들어주기 */
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 80%;
+  }
+  
+  /* 시계 위치를 오른쪽으로 옮김 */
+  #clock {
+    position: fixed;
+    top: 20px; /* 상단 여백 조정 */
+    right: 20px; /* 오른쪽 여백 조정 */
+    font-family: "Arial", sans-serif; /* 시계의 글꼴을 Arial로 변경 */
+    font-size: 24px; /* 시계의 폰트 크기를 조정 */
+    color: #676767; /* 글꼴 색을 흰색으로 설정 */
+  }
+  
+  /* "Welcome to Todo List" 제목 스타일 */
+  #welcome {
+    font-size: 48px; /* 폰트 사이즈를 크게 조정 */
+    margin-top: calc(20vh - 18px); /* 화면의 중간에서 1/5 지점 위에 위치하도록 조정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    color: white; /* 글꼴 색을 흰색으로 설정 */
+  }
+  
+  /* 로그인 폼 스타일 */
+  #login-form {
+    margin-top: 20px; /* 로그인 폼의 상단 간격을 조정 */
+    text-align: center; /* 입력 상자 및 버튼을 가운데 정렬 */
+  }
+  
+  /*로그인 후 Hello 아이디*/
+  #greeting {
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    margin-top: 20px; /* 위쪽 여백을 추가하여 Welcome to Todo List와의 간격을 조정합니다. */
+    font-family: "Roboto Condensed", sans-serif; /* 글꼴을 Arial로 변경합니다. */
+    font-size: 35px; /* 글자 크기를 조절합니다. */
+    color: orangered; /* 글자 색상을 변경합니다. */
+  }
+  
+  
+  /* "Write a To Do and Press Enter" 문구 스타일 */
+  #todo-form input[type="text"]::placeholder {
+    font-style: "Roboto Condensed", sans-serif; /* 입력 필드 placeholder 텍스트를 이탤릭체로 변경 */
+  }
+  
+  /* "What is your name?" 입력 상자 스타일 */
+  #login-form input[type="text"] {
+    padding: 10px; /* 내부 여백 추가 */
+    border: 2px solid #ccc; /* 테두리 스타일 및 색상 지정 */
+    border-radius: 15px; /* 테두리를 둥글게 만듦 */
+    font-size: 16px; /* 글꼴 크기 조정 */
+  }
+  
+  /* 로그인 버튼 스타일 */
+  #login-form input[type="submit"] {
+    padding: 10px 20px; /* 내부 여백 추가 */
+    border: none; /* 테두리 없음 */
+    background-color: #ffcc00; /* 배경색 지정 */
+    color: white; /* 글꼴 색상 지정 */
+    border-radius: 15px; /* 테두리를 둥글게 만듦 */
+    font-size: 16px; /* 글꼴 크기 조정 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경하여 버튼임을 나타냄 */
+  }
+  
+  /* 로그인 버튼 호버 효과 */
+  #login-form input[type="submit"]:hover {
+    background-color: #ff9900; /* 호버시 배경색 변경 */
+  }
+  
+  
+  /* 할 일 입력 폼 스타일 */
+  #todo-form {
+    margin-top: 40px; /* 할 일 입력 폼의 상단 간격을 조정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+  }
+  
+  /* 할 일 입력 상자 스타일 */
+  #todo-form input[type="text"] {
+    padding: 10px; /* 내부 여백 추가 */
+    border: 2px solid #ccc; /* 테두리 스타일 및 색상 지정 */
+    border-radius: 10px; /* 테두리를 둥글게 만듦 */
+    font-size: 16px; /* 글꼴 크기 조정 */
+    width: 50%; /* 입력 상자의 너비를 설정하여 크기를 조정 */
+    margin-bottom: 10px; /* 입력 상자와 아래쪽 여백 추가 */
+  }
+  
+  /* 할 일 입력 상자 호버 효과 */
+  #todo-form input[type="text"]:hover {
+    border-color: #666; /* 호버시 테두리 색상 변경 */
+  }
+  
+  /* 할 일 입력 상자 포커스 효과 */
+  #todo-form input[type="text"]:focus {
+    outline: none; /* 포커스시 외곽선 제거 */
+    border-color: #ffcc00; /* 포커스시 테두리 색상 변경 */
+  }
+  
+  /* 할 일 리스트 스타일 */
+  #todo-list {
+    display: flex; /* Flexbox를 사용하여 아이템들을 가로로 정렬 */
+    flex-direction: column; /* 수직으로 아이템을 정렬 */
+    align-items: center; /* 아이템을 수직 가운데 정렬 */
+  }
+  
+  /* 할 일 리스트 아이템 스타일 */
+  #todo-list li {
+    margin-bottom: 5px; /* 각 아이템 간격을 조정 */
+    width: 50%; /* 아이템의 너비를 조정하여 중앙 정렬 */
+    font-family: "Roboto Condensed", sans-serif; /* 글꼴을 귀여운 스타일로 변경 */
+    font-weight: 500; /* 글꼴을 두껍게 설정 */
+    font-size: 18px; /* 글꼴 크기를 조절하여 귀여운 스타일을 부각시킵니다 */
+  }
+  
+  /* quotes 스타일 */
+  #quote {
+    position: fixed; /* 고정 위치로 설정합니다. */
+    bottom: 20px; /* 하단 여백을 추가합니다. */
+    left: 50%; /* 가운데 정렬을 위해 왼쪽 위치를 조정합니다. */
+    transform: translateX(-50%); /* 가운데 정렬을 위해 수평으로 이동합니다. */
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    font-family: "Roboto Condensed", sans-serif; /* 글꼴을 변경합니다. */
+    font-size: 16px; /* 글자 크기를 조절합니다. */
+    font-weight: bold; /* 글자 두껍게 설정합니다. */
+    color: #333; /* 글자 색상을 설정합니다. */
+  }
+  
+  /* weather 스타일 */
+  #weather {
+    position: fixed; /* 화면에 고정 */
+    top: 20px; /* 상단 여백 조정 */
+    left: 20px; /* 왼쪽 여백 조정 */
+    text-align: center; /* 가운데 정렬 */
+    font-family: "Roboto Condensed", sans-serif; /* 글꼴 설정 */
+    font-size: 17px; /* 글자 크기 조절 */
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+    color: #333; /* 글자 색상 설정 */
+    padding: 10px 20px; /* 내부 여백 설정 */
+  
+  }
+  
+  /* 위치 정보 스타일 */
+  #weather span:last-child {
+    display: block; /* 위치 정보를 한 줄로 표시 */
+    margin-top: 5px; /* 위치 정보와 온도 사이 여백 조정 */
+    color: #676767; /* 위치 정보의 글자 색상 설정 */
+  }
+  
+  /* 날씨 정보 스타일 */
+  #weather span:first-child {
+    display: block; /* 날씨 정보를 한 줄로 표시 */
+    margin-bottom: 10px; /* 날씨 정보와 위치 정보 사이 여백 조정 */
+  
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+    color: #666; /* 위치 정보의 글자 색상 설정 */
+  }
+  
+  
+  /*로그아웃 버튼 꾸미기 */
+  #logout-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+
+
